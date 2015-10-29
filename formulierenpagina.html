@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Formulierpagina</title>
+        <link rel="stylesheet" type="text/css" href="css/formulierenpagina.css">
+            <script src="formulier.js"></script>
     </head>
     <body>
 
@@ -10,16 +12,19 @@
         <header>
             <h1>CMD Amsterdam - Intranet</h1>
             <p>Communication and Multimedia Design is een ontwerpopleiding voor interactieve media in Amsterdam.</p>
-            <img src="img/cmd_logo.png" alt="">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Opleiding</a></li>
-                    <li><a href="#">Onderwijsprogramma</a></li>
-                    <li><a href="#">Organisatie</a></li>
-                    <li><a href="#">Stages en projecten</a></li>
-                </ul>
-            </nav>
+            <picture><img src="img/cmd_logo.png" alt=""></picture>
+            <!--   code gekopieerd van www.weggeefcode.nl   -->
+        <nav>
+            <input type="checkbox" id="button" class="burger">
+            <label for="button"></label>
+            <ul id="content">
+                <li><a href="#1">Home</a></li>
+                <li><a href="#2">Opleiding</a></li>
+                <li><a href="#3">Onderwijsprogramma</a></li>
+                <li><a href="#4">Organisatie</a></li>
+                <li><a href="#5">Stages en projecten</a></li>
+            </ul>
+        </nav>
             <form method="get" action="Formulierpagina.html">
                 <label>
                     Zoeken
@@ -437,8 +442,12 @@
         </aside>
 
         <!-- Footer informatie -->
+
         <footer>
+
             <section id="sitemap">
+            <span id="button1" class="btn1">Klik hier om de sitemap te zien</span>
+             <div id="content1">
                 <h2>Sitemap</h2>
                 <ul>
                     <li>
@@ -484,6 +493,7 @@
                     </li>
                 </ul>
             </section>
+            </div>
 
             <section id="contact">
                 <h2>Contact</h2>
@@ -514,6 +524,8 @@
             </section>
 
             <p id="feedback"><a href="#">Geef ons feedback</a></p>
+
+
 
         </footer>
 

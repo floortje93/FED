@@ -1,0 +1,398 @@
+* {
+    box-sizing: inherit;
+    font-size: 20px;
+}
+
+body {
+    background: lightblue;
+    position: relative;
+    margin-top: 80px;
+}
+
+nav {
+    position: fixed;
+    display: inline;
+    text-align: center;
+    top: 0;
+    left:0;
+    right:0;
+    margin:0;
+    padding: 1%;
+    background-color:darksalmon;
+    border: solid 1em;
+    text-shadow: .1em .1em 0.4em;
+    text-transform: uppercase;
+    width:100%;
+}
+
+header nav ul a {
+    text-decoration: none;
+}
+
+body > header {
+    position: static;
+    background: pink;
+    border: .2em solid purple;
+    border-radius: 1em;
+    box-shadow: .5em .5em 5px purple;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+input[type="search"] {
+    background-color: bisque;
+}
+
+main {
+    background: lightgreen;
+    border: .2em solid darkgreen;
+    border-radius: 1em;
+    box-shadow: .5em .5em 5px darkgreen;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+section.related h2 {
+    width: 100%;
+}
+
+section.related {
+    background: LemonChiffon;
+    border: .2em solid Gold;
+    border-radius: 1em;
+    box-shadow: .5em .5em 5px Gold;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section.related > article {
+    padding: 1em;
+    flex: ;
+}
+
+aside {
+    background: Lavender;
+    border: .2em solid plum;
+    border-radius: 1em;
+    box-shadow: .5em .5em 5px plum;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+body > footer {
+    background: WhiteSmoke;
+    border: .2em solid gainsboro;
+    border-radius: 1em;
+    box-shadow: .5em .5em 5px gainsboro;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+#sitemap {
+    padding: 1em;
+}
+
+#contact {
+    padding: 1em;
+}
+
+#search {
+    padding: 1em;
+}
+
+picture img {
+    max-width: 50%;
+    transition: 1s;
+}
+
+header > picture img:hover {
+    transform: rotate(360deg);
+}
+
+main > article > section > picture img:hover {
+    transform: scale(0.5);
+    transition: 2s;
+}
+
+
+iframe {
+    display:block;
+    margin-top: .8em ;
+    margin-bottom: .4em ;
+}
+
+
+/*=======================MEDIAQUERIES=======================*/
+
+/*mediaqueries voor tablet screensize */
+@media screen and (max-width:50em) {
+    html {
+    font-size: 18px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row-reverse;
+        width:100%;
+    }
+
+    body {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+
+/*hamburgermenu - weggeefcode.nl*/
+    html {
+        box-sizing: border-box;
+    }
+
+    html *,
+    html *:before,
+    html *:after {
+        box-sizing: inherit;
+    }
+
+    /* stijl & kleur */
+    nav,
+    a {
+        color: darksalmon;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        color: aliceblue;
+        background: darksalmon;
+    }
+
+    /* dropdown menu stijl */
+    nav {
+        border: 1px solid darksalmon;
+        transition: height 1s;
+        height: auto;
+    }
+
+    nav label {
+        text-align: left;
+        color: darksalmon;
+    }
+
+    nav label:hover {
+        background-color:darksalmon;
+        color: white;
+    }
+
+    nav input:checked + label {
+        background-color: darksalmon;
+        color: white;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        background-color: hsla(0, 0%, 100%, .96);
+    }
+
+    nav ul a {
+        display: block;
+        padding: .5em 1.5em;
+    }
+
+    /* dropdown */
+    nav ul {
+        display: block;
+        top: 1.1em;
+        width: 100%;
+    }
+
+    /*de checkbox verbergen */
+    nav input {
+        display: none;
+    }
+
+    /*de label die bij het menu-icoontje hoort klikbaar maken */
+    nav input.burger + label {
+        box-sizing: content-box;
+        display: block;
+        height: 1.1em;
+        padding: .5em;
+        cursor: pointer;
+    }
+
+    /*het menu-icoontje */
+    nav input.burger + label:before {
+        content: "\2261";
+        font-size: 1.6em;
+        line-height: 0;
+        position: relative;
+        top: .1em;
+        padding: 0 .2em;
+        color: aliceblue;
+    }
+
+    /*het kruisje */
+    nav input.burger:checked + label:before {
+        content: "\2715";
+        font-size: 1em;
+        /*    geen font-size-adjust */
+        font-size-adjust: 0;
+        top: .06em;
+        padding: 0 .1em;
+    }
+
+    /* toggles */
+    .hidden {
+        display: none!important;
+    }
+
+    .show {
+        display: initial!important;
+    }
+}
+
+
+/*mediaqueries voor mobile screensize */
+@media screen and (max-width:160.667em) {
+
+    html {
+    font-size: 16px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row-reverse;
+        width:auto;
+    }
+
+    body {
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.related > article {
+    padding: 1em;
+    flex: ;
+}
+
+/*hamburgermenu - weggeefcode.nl*/
+    html {
+        box-sizing: border-box;
+    }
+    html *,
+    html *:before,
+    html *:after {
+        box-sizing: inherit;
+    }
+    /* stijl & kleur */
+    nav,
+    a {
+        color: darkblue;
+        text-decoration: none;
+    }
+    nav a:hover {
+        color: aliceblue;
+        background: darkblue;
+    }
+    /* dropdown menu stijl */
+    nav {
+        border: 1px solid dodgerblue;
+        transition: height 1s;
+        height: auto;
+    }
+    nav label {
+        text-align: left;
+        color: darkblue;
+    }
+    nav label:hover {
+        background-color: darkblue;
+        color: white;
+    }
+    nav input:checked + label {
+        background-color: darkblue;
+        color: white;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        background-color: hsla(0, 0%, 100%, .96);
+    }
+    nav ul a {
+        display: block;
+        padding: .5em 1.5em;
+    }
+    /* dropdown */
+    nav ul {
+        display: block;
+        top: 1.1em;
+        width: 100%;
+    }
+    /*de checkbox verbergen */
+    nav input {
+        display: none;
+    }
+    /*de label die bij het menu-icoontje hoort klikbaar maken */
+    nav input.burger + label {
+        box-sizing: content-box;
+        display: block;
+        height: 1.1em;
+        padding: .5em;
+        cursor: pointer;
+    }
+    /*het menu-icoontje */
+    nav input.burger + label:before {
+        content: "\2261";
+        font-size: 1.6em;
+        line-height: 0;
+        position: relative;
+        top: .1em;
+        padding: 0 .2em;
+        color: aliceblue;
+    }
+    /*het kruisje */
+    nav input.burger:checked + label:before {
+        content: "\2715";
+        font-size: 1em;
+        /*    geen font-size-adjust */
+        font-size-adjust: 0;
+        top: .06em;
+        padding: 0 .1em;
+    }
+
+
+    /* toggle */
+    .hidden {
+        display: none!important;
+    }
+    .show {
+        display: initial!important;
+    }
+}
+
+
+
+
+/* toggle - weggeefcode.nl */
+
+/* Styles voor de button */
+
+.btn {
+    cursor: pointer;
+}
+
+.btn:hover {}
+
+.btn:active {}
+
+
+/* Verberg het element wanneer het de class hidden heeft */
+
+.hidden {
+    display: none!important;
+}
+
